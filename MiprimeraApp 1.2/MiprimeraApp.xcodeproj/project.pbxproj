@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87553DD91A6048A100AC59F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87553DD81A6048A100AC59F5 /* AppDelegate.swift */; };
+		87553DDE1A6048A100AC59F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87553DDC1A6048A100AC59F5 /* Main.storyboard */; };
+		87553DE01A6048A100AC59F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87553DDF1A6048A100AC59F5 /* Images.xcassets */; };
+		87553DE31A6048A100AC59F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87553DE11A6048A100AC59F5 /* LaunchScreen.xib */; };
+		87553DEF1A6048A100AC59F5 /* MiprimeraAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87553DEE1A6048A100AC59F5 /* MiprimeraAppTests.swift */; };
+		87553DFF1A628E0900AC59F5 /* ContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87553DFE1A628E0900AC59F5 /* ContactoViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		87553DE91A6048A100AC59F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87553DCB1A6048A000AC59F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87553DD21A6048A000AC59F5;
+			remoteInfo = MiprimeraApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87553DD31A6048A000AC59F5 /* MiprimeraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiprimeraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87553DD71A6048A100AC59F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87553DD81A6048A100AC59F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		87553DDD1A6048A100AC59F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87553DDF1A6048A100AC59F5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		87553DE21A6048A100AC59F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		87553DE81A6048A100AC59F5 /* MiprimeraAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiprimeraAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87553DED1A6048A100AC59F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87553DEE1A6048A100AC59F5 /* MiprimeraAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiprimeraAppTests.swift; sourceTree = "<group>"; };
+		87553DFE1A628E0900AC59F5 /* ContactoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactoViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87553DD01A6048A000AC59F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87553DE51A6048A100AC59F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87553DCA1A6048A000AC59F5 = {
+			isa = PBXGroup;
+			children = (
+				87553DD51A6048A000AC59F5 /* MiprimeraApp */,
+				87553DEB1A6048A100AC59F5 /* MiprimeraAppTests */,
+				87553DD41A6048A000AC59F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87553DD41A6048A000AC59F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87553DD31A6048A000AC59F5 /* MiprimeraApp.app */,
+				87553DE81A6048A100AC59F5 /* MiprimeraAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87553DD51A6048A000AC59F5 /* MiprimeraApp */ = {
+			isa = PBXGroup;
+			children = (
+				87553DFE1A628E0900AC59F5 /* ContactoViewController.swift */,
+				87553DD81A6048A100AC59F5 /* AppDelegate.swift */,
+				87553DDC1A6048A100AC59F5 /* Main.storyboard */,
+				87553DDF1A6048A100AC59F5 /* Images.xcassets */,
+				87553DE11A6048A100AC59F5 /* LaunchScreen.xib */,
+				87553DD61A6048A100AC59F5 /* Supporting Files */,
+			);
+			path = MiprimeraApp;
+			sourceTree = "<group>";
+		};
+		87553DD61A6048A100AC59F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				87553DD71A6048A100AC59F5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87553DEB1A6048A100AC59F5 /* MiprimeraAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				87553DEE1A6048A100AC59F5 /* MiprimeraAppTests.swift */,
+				87553DEC1A6048A100AC59F5 /* Supporting Files */,
+			);
+			path = MiprimeraAppTests;
+			sourceTree = "<group>";
+		};
+		87553DEC1A6048A100AC59F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				87553DED1A6048A100AC59F5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87553DD21A6048A000AC59F5 /* MiprimeraApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87553DF21A6048A100AC59F5 /* Build configuration list for PBXNativeTarget "MiprimeraApp" */;
+			buildPhases = (
+				87553DCF1A6048A000AC59F5 /* Sources */,
+				87553DD01A6048A000AC59F5 /* Frameworks */,
+				87553DD11A6048A000AC59F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiprimeraApp;
+			productName = MiprimeraApp;
+			productReference = 87553DD31A6048A000AC59F5 /* MiprimeraApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		87553DE71A6048A100AC59F5 /* MiprimeraAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87553DF51A6048A100AC59F5 /* Build configuration list for PBXNativeTarget "MiprimeraAppTests" */;
+			buildPhases = (
+				87553DE41A6048A100AC59F5 /* Sources */,
+				87553DE51A6048A100AC59F5 /* Frameworks */,
+				87553DE61A6048A100AC59F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87553DEA1A6048A100AC59F5 /* PBXTargetDependency */,
+			);
+			name = MiprimeraAppTests;
+			productName = MiprimeraAppTests;
+			productReference = 87553DE81A6048A100AC59F5 /* MiprimeraAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87553DCB1A6048A000AC59F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = MGM;
+				TargetAttributes = {
+					87553DD21A6048A000AC59F5 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					87553DE71A6048A100AC59F5 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 87553DD21A6048A000AC59F5;
+					};
+				};
+			};
+			buildConfigurationList = 87553DCE1A6048A000AC59F5 /* Build configuration list for PBXProject "MiprimeraApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87553DCA1A6048A000AC59F5;
+			productRefGroup = 87553DD41A6048A000AC59F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87553DD21A6048A000AC59F5 /* MiprimeraApp */,
+				87553DE71A6048A100AC59F5 /* MiprimeraAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87553DD11A6048A000AC59F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87553DDE1A6048A100AC59F5 /* Main.storyboard in Resources */,
+				87553DE31A6048A100AC59F5 /* LaunchScreen.xib in Resources */,
+				87553DE01A6048A100AC59F5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87553DE61A6048A100AC59F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87553DCF1A6048A000AC59F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87553DFF1A628E0900AC59F5 /* ContactoViewController.swift in Sources */,
+				87553DD91A6048A100AC59F5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87553DE41A6048A100AC59F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87553DEF1A6048A100AC59F5 /* MiprimeraAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87553DEA1A6048A100AC59F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87553DD21A6048A000AC59F5 /* MiprimeraApp */;
+			targetProxy = 87553DE91A6048A100AC59F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		87553DDC1A6048A100AC59F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87553DDD1A6048A100AC59F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87553DE11A6048A100AC59F5 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87553DE21A6048A100AC59F5 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87553DF01A6048A100AC59F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87553DF11A6048A100AC59F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87553DF31A6048A100AC59F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MiprimeraApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		87553DF41A6048A100AC59F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MiprimeraApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		87553DF61A6048A100AC59F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MiprimeraAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiprimeraApp.app/MiprimeraApp";
+			};
+			name = Debug;
+		};
+		87553DF71A6048A100AC59F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MiprimeraAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiprimeraApp.app/MiprimeraApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87553DCE1A6048A000AC59F5 /* Build configuration list for PBXProject "MiprimeraApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87553DF01A6048A100AC59F5 /* Debug */,
+				87553DF11A6048A100AC59F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87553DF21A6048A100AC59F5 /* Build configuration list for PBXNativeTarget "MiprimeraApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87553DF31A6048A100AC59F5 /* Debug */,
+				87553DF41A6048A100AC59F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87553DF51A6048A100AC59F5 /* Build configuration list for PBXNativeTarget "MiprimeraAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87553DF61A6048A100AC59F5 /* Debug */,
+				87553DF71A6048A100AC59F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87553DCB1A6048A000AC59F5 /* Project object */;
+}

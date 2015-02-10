@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Contacto View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ContactoViewController" customModule="MiprimeraApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="uNM-bt-v3i">
+                                <rect key="frame" x="230" y="40" width="140" height="26"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portada" translatesAutoresizingMaskIntoConstraints="NO" id="A11-OH-A1W">
+                                <rect key="frame" x="-82" y="86" width="764" height="240"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curso Programación Swift iOS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sp2-kW-omc">
+                                <rect key="frame" x="174" y="356" width="253" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/01/2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMJ-qt-UJI">
+                                <rect key="frame" x="256" y="408" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saludo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aHc-0n-a4j">
+                                <rect key="frame" x="15" y="449" width="570" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha y hora" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyc-fL-36V">
+                                <rect key="frame" x="250" y="480" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRR-WY-EBr">
+                                <rect key="frame" x="187" y="474" width="44" height="30"/>
+                                <state key="normal" title="Actual">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="muestraFechaYHora:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b1K-Fu-HM8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aHc-0n-a4j" firstAttribute="top" secondItem="MMJ-qt-UJI" secondAttribute="bottom" constant="20" id="1Df-ht-oJw"/>
+                            <constraint firstItem="aHc-0n-a4j" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.95" id="2OI-f6-3FR"/>
+                            <constraint firstItem="wyc-fL-36V" firstAttribute="top" secondItem="aHc-0n-a4j" secondAttribute="bottom" constant="10" id="CWk-9k-UJJ"/>
+                            <constraint firstItem="wyc-fL-36V" firstAttribute="leading" secondItem="MRR-WY-EBr" secondAttribute="trailing" constant="19" id="DeO-fX-ReU"/>
+                            <constraint firstItem="uNM-bt-v3i" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="E0h-Aa-WTy"/>
+                            <constraint firstItem="wyc-fL-36V" firstAttribute="centerY" secondItem="MRR-WY-EBr" secondAttribute="centerY" constant="1.5" id="GMJ-Kr-qZS"/>
+                            <constraint firstItem="MMJ-qt-UJI" firstAttribute="top" secondItem="sp2-kW-omc" secondAttribute="bottom" constant="30" id="If9-io-Yyd"/>
+                            <constraint firstItem="wyc-fL-36V" firstAttribute="centerX" secondItem="aHc-0n-a4j" secondAttribute="centerX" id="LvC-Tn-ehW"/>
+                            <constraint firstAttribute="centerX" secondItem="sp2-kW-omc" secondAttribute="centerX" id="NDM-N0-Krc"/>
+                            <constraint firstAttribute="centerY" secondItem="A11-OH-A1W" secondAttribute="centerY" constant="30" id="NKd-7T-ndd"/>
+                            <constraint firstItem="aHc-0n-a4j" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="95" id="Otk-fA-MCE"/>
+                            <constraint firstItem="aHc-0n-a4j" firstAttribute="centerX" secondItem="MMJ-qt-UJI" secondAttribute="centerX" id="X2u-wR-l3M"/>
+                            <constraint firstAttribute="centerX" secondItem="MMJ-qt-UJI" secondAttribute="centerX" id="dCD-1d-Nvr"/>
+                            <constraint firstItem="A11-OH-A1W" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="j2e-ul-tBO"/>
+                            <constraint firstItem="uNM-bt-v3i" firstAttribute="centerX" secondItem="A11-OH-A1W" secondAttribute="centerX" id="l7J-OI-1cl"/>
+                            <constraint firstItem="A11-OH-A1W" firstAttribute="top" secondItem="uNM-bt-v3i" secondAttribute="bottom" constant="20" id="tqP-mv-H9a"/>
+                            <constraint firstItem="sp2-kW-omc" firstAttribute="top" secondItem="A11-OH-A1W" secondAttribute="bottom" constant="30" id="vvv-uE-ka0"/>
+                            <constraint firstAttribute="centerX" secondItem="A11-OH-A1W" secondAttribute="centerX" id="wCc-KW-JDI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NKd-7T-ndd"/>
+                                <exclude reference="Otk-fA-MCE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="fechaYHoraLabel" destination="wyc-fL-36V" id="RAN-fE-Yfh"/>
+                        <outlet property="saludoLabel" destination="aHc-0n-a4j" id="g7K-iq-qRT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="420"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="140" height="26"/>
+        <image name="portada" width="763" height="574"/>
+    </resources>
+</document>
