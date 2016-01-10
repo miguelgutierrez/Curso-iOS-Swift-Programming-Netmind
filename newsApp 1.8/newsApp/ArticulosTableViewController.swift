@@ -41,6 +41,8 @@ class ArticulosTableViewController: UITableViewController {
 
         self.actualizaArticulosDeCoreData()
         
+        self.tableView.reloadData()
+        
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -86,39 +88,25 @@ class ArticulosTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == MainStoryboard.SegueIdentifiers.muestraDetalleArticulo {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
                 if arrayDeArticulos.count > indexPath.row {
                     lecturasRealizadas++;
                     grabaUserDefaults(lecturasRealizadas)
                     
-                    let muestraDetalleArticuloController = segue.destinationViewController as DetalleArticuloViewController
+                    let muestraDetalleArticuloController = segue.destinationViewController as! DetalleArticuloViewController
                     muestraDetalleArticuloController.articulo = arrayDeArticulos[indexPath.row]
                     muestraDetalleArticuloController.delegate = self
                 }                
             }
         }
         else if segue.identifier == MainStoryboard.SegueIdentifiers.añadeArticulo {
-            /*
-            var articulo = Articulo ()
-            arrayDeArticulos.append(articulo)*/
-            // con CoreData
-            /*let context = StoreNewsApp.defaultStore().context
-            let articulo = NSEntityDescription.insertNewObjectForEntityForName("Articulo", inManagedObjectContext: context) as Articulo
-            */
             if let articulo = NSEntityDescription.insertNewObjectForEntityForName(Articulo.entityName(), inManagedObjectContext:StoreNewsApp.defaultStore().context) as? Articulo {
-                // en iOS <= 7.1 segue.destinationViewController --> ArticuloViewController
-                // en iOS >= 8.0 segue.destinationViewController --> UINavigationController
-                var controlador : ArticuloViewController
-                if let navigation = segue.destinationViewController as? UINavigationController {
-                    controlador = navigation.viewControllers.first as ArticuloViewController
-                    //controlador = navigation.viewControllers[0] as ArticuloViewController
-                }
-                else{
-                    controlador = segue.destinationViewController as ArticuloViewController
-                }
                 
-                controlador.articulo = articulo
-                controlador.delegate = self
+                if let controlador =  segue.destinationViewController as? ArticuloViewController{
+                    // inicializo los valores de la entidad
+                    controlador.articulo = articulo
+                    controlador.delegate = self
+                }
                 
             } else {
                 NSLog(MensajesErrorCoreData.errorCrearObjectFormat, Articulo.entityName())

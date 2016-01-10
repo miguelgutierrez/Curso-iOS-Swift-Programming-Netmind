@@ -45,7 +45,7 @@ class ContactoViewController: UIViewController {
         
         let calendar = NSCalendar.currentCalendar()
 
-        let components = calendar.components(.CalendarUnitHour, fromDate: NSDate())
+        let components = calendar.components(.Hour, fromDate: NSDate())
         let hour = components.hour
 
         var mañanaOTarde=""
@@ -66,7 +66,7 @@ class ContactoViewController: UIViewController {
     }
     
     @IBAction func muestraFechaYHora(sender: UIButton) {
-        var dateFormatter = NSDateFormatter()
+        let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd hh:mm:ss"
         
         fechaYHoraLabel.text=dateFormatter.stringFromDate(NSDate())

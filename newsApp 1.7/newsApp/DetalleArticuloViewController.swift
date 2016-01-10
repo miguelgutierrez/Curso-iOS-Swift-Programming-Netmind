@@ -27,7 +27,7 @@ class DetalleArticuloViewController: UIViewController {
         
         if let articulo = self.articulo {
 
-            var dateFormatter = NSDateFormatter()
+            let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = FormatoFecha.formatoGeneral
             let fechaStr = dateFormatter.stringFromDate(articulo.fecha )
 

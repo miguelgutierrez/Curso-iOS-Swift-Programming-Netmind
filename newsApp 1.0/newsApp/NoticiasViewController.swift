@@ -88,7 +88,7 @@ class NoticiasViewController: UIViewController, UIWebViewDelegate {
         
         activityIndicator.stopAnimating()
     }
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
             NSLog("Error al cargar la web")
     }
 }

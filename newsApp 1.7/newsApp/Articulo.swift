@@ -27,7 +27,7 @@ class Articulo: NSManagedObject {
         let request = NSFetchRequest()
         let model = StoreNewsApp.defaultStore().model
         
-        let entidad = model.entitiesByName[Articulo.entityName()] as NSEntityDescription
+        let entidad = model.entitiesByName[Articulo.entityName()]
         request.entity = entidad
         
         let sd = NSSortDescriptor(key: "nombre", ascending: true)
@@ -37,7 +37,13 @@ class Articulo: NSManagedObject {
 
         var error : NSError?
         
-        let result = context.executeFetchRequest(request, error: &error)
+        let result: [AnyObject]?
+        do {
+            result = try context.executeFetchRequest(request)
+        } catch let error1 as NSError {
+            error = error1
+            result = nil
+        }
         
         if result == nil {
             NSException.raise(MensajesErrorCoreData.fetchFailed, format: MensajesErrorCoreData.errorFetchObjectFormat, arguments:getVaList([error!]))

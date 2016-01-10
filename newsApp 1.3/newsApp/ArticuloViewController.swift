@@ -41,15 +41,15 @@ class ArticuloViewController: UIViewController, UITextFieldDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == MainStoryboard.SegueIdentifiers.muestraDetalleArticulo {
-            let muestraDetalleArticuloController = segue.destinationViewController as DetalleArticuloViewController
-            muestraDetalleArticuloController.setArticulo(texto: textoArticuloTextView.text)
+            let muestraDetalleArticuloController = segue.destinationViewController as? DetalleArticuloViewController
+            muestraDetalleArticuloController?.setArticulo(texto: textoArticuloTextView.text)
             
         }
 
     }
 
     // MARK: cerrar el teclado: el usuario pulsa en la view
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
         self.view.endEditing(true)
     }

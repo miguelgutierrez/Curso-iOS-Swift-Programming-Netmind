@@ -12,9 +12,9 @@ import MapKit
 class Anotacion: NSObject, MKAnnotation {
     
     var coordinate:CLLocationCoordinate2D 
-    var title: String {return "Mi casa"}
-    var subtitle: String {
-        return NSString(format: "Coordenadas: %0.5f, %0.5f", coordinate.latitude, coordinate.longitude)
+    var title: String? {return "Mi casa"}
+    var subtitle: String? {
+        return NSString(format: "Coordenadas: %0.5f, %0.5f", coordinate.latitude, coordinate.longitude) as String
     }
     
     init(coordenada:CLLocationCoordinate2D){

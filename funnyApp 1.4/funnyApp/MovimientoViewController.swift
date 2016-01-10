@@ -91,7 +91,7 @@ class MovimientoViewController: UIViewController {
     - el usuario ha agitado el dispositivo
     -
     */
-    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         movimientoLabel.text="Se ha agitado"
     }
     /* PROCESO

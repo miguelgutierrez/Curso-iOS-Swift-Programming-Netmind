@@ -53,12 +53,12 @@ class LocalizacionViewController: UIViewController, MKMapViewDelegate, CLLocatio
         cargarAnotaciones()
     }
     // MARK: - MKMapViewDelegate
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? Anotacion {
             var pin : MKPinAnnotationView!
             
             if let pinMapa = mapaMapView.dequeueReusableAnnotationViewWithIdentifier(MainStoryboard.PinIdentifiers.pinMapa) {
-                pin = pinMapa as MKPinAnnotationView
+                pin = pinMapa as! MKPinAnnotationView
                 pin.annotation = annotation
             }
             else {
@@ -77,7 +77,7 @@ class LocalizacionViewController: UIViewController, MKMapViewDelegate, CLLocatio
     }
     
     // MARK: - CLLocationManagerDelegate
-    func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!) {
+    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         let userLocation = MKCoordinateRegionMakeWithDistance(
             newLocation.coordinate,
             5000.0,5000.0)
@@ -85,9 +85,9 @@ class LocalizacionViewController: UIViewController, MKMapViewDelegate, CLLocatio
         mapaMapView.setRegion(userLocation, animated: true)
     }
     // el usuario ha dado permiso para poder localizar
-    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         
-        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.Authorized  ||
+        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedAlways  ||
             CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse ) {
                 showLocation()
         }
@@ -95,7 +95,7 @@ class LocalizacionViewController: UIViewController, MKMapViewDelegate, CLLocatio
     }
     // MARK: - funciones auxiliares
     private func refreshLocation() {
-        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.Authorized  ||
+        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedAlways  ||
             CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse ) {
             showLocation()
         }

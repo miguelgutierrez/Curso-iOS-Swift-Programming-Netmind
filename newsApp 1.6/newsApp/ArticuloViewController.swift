@@ -54,12 +54,12 @@ class ArticuloViewController: UIViewController, UITextFieldDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == MainStoryboard.SegueIdentifiers.muestraDetalleArticulo {
-            let muestraDetalleArticuloController = segue.destinationViewController as DetalleArticuloViewController
+            let muestraDetalleArticuloController = segue.destinationViewController as! DetalleArticuloViewController
 
             muestraDetalleArticuloController.articulo = articulo
         }
         else if segue.identifier == MainStoryboard.SegueIdentifiers.aFecha {
-            let fechaController = segue.destinationViewController as FechaViewController
+            let fechaController = segue.destinationViewController as! FechaViewController
             
             fechaController.delegate = self
             
@@ -68,7 +68,7 @@ class ArticuloViewController: UIViewController, UITextFieldDelegate {
     }
 
     // MARK: cerrar el teclado: el usuario pulsa en la view
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
         self.view.endEditing(true)
     }
@@ -79,21 +79,28 @@ class ArticuloViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: eventos
     @IBAction func grabar(sender: UIButton) {
-        articulo?.nombre = nombreEscritorTextField.text
-        articulo?.texto = textoArticuloTextView.text
-
-        var dateFormatter = NSDateFormatter()
+        if let nombre = nombreEscritorTextField.text{
+            articulo.nombre = nombre
+        }
+        if let texto = textoArticuloTextView.text{
+            articulo.texto = texto
+        }
+        
+        let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = FormatoFecha.formatoGeneral
-        articulo.fecha = dateFormatter.dateFromString(fechaArticuloTextField.text)
+        if let fecha = fechaArticuloTextField.text {
+            articulo.fecha = dateFormatter.dateFromString(fecha)
+        }
         
         delegate?.cerrar(self)
         
         // self.navigationController?.popViewControllerAnimated(true)
     }
 
+
     // MARK: interface 
     func actualizaFecha (fecha : NSDate) {
-        var dateFormatter = NSDateFormatter()
+        let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = FormatoFecha.formatoGeneral
         
         fechaArticuloTextField.text = dateFormatter.stringFromDate(fecha)

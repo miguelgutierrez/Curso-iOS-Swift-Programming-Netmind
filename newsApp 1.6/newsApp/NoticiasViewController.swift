@@ -85,13 +85,12 @@ class NoticiasViewController: UIViewController, UIWebViewDelegate, UIPickerViewD
     }
 
     // MARK: UIPickerViewDelegate
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if let componente = ComponentePeriodicos(rawValue: component) {
             switch componente {
             case .Tipos:
                 return TipoPeriodico(rawValue: row)?.nombre()
-
+                
             case .Periodicos: // depende del tipo de periódico seleccionado
                 if let tipoPeriodicoSeleccionado = TipoPeriodico(rawValue: periodicosPickerView.selectedRowInComponent(ComponentePeriodicos.Tipos.rawValue)) {
                     return Periodico(tipo: tipoPeriodicoSeleccionado, periodico: row)?.nombre()
@@ -101,7 +100,6 @@ class NoticiasViewController: UIViewController, UIWebViewDelegate, UIPickerViewD
         
         return nil
     }
-
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if let componente = ComponentePeriodicos(rawValue: component) {
             switch componente {
@@ -133,7 +131,7 @@ class NoticiasViewController: UIViewController, UIWebViewDelegate, UIPickerViewD
         
         activityIndicator.stopAnimating()
     }
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
         NSLog("Error al cargar la web")
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         activityIndicator.stopAnimating()        

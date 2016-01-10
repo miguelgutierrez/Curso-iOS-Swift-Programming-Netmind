@@ -90,13 +90,13 @@ class NoticiasViewController: UIViewController, UIWebViewDelegate {
         
         activityIndicator.stopAnimating()
     }
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
         NSLog("Error al cargar la web")
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         activityIndicator.stopAnimating()        
     }
     // MARK: métodos de ayuda
-    private func mostrarWeb(# esDeportivo:Bool,  periodico: Int){
+    private func mostrarWeb(esDeportivo  esDeportivo:Bool,  periodico: Int){
         if esDeportivo {
             mostrarWeb(TipoPeriodico.Deportivo, periodico: periodico)
         }

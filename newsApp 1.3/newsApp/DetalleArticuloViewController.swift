@@ -36,7 +36,7 @@ class DetalleArticuloViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     // MARK: funciones de ayuda
-    func setArticulo(# texto:String){
+    func setArticulo(texto  texto:String){
         articuloTexto=texto
     }
 

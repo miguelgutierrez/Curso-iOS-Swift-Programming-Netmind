@@ -42,12 +42,16 @@ class CaptandoLaAtencionDelUsuarioViewController: UIViewController, UITextFieldD
         //Setup the audio player
         
         if let pathFichero = NSBundle.mainBundle().pathForResource("splash", ofType: "wav"){
-            if let ficheroSonidoURL = NSURL(fileURLWithPath: pathFichero){
-                var error:NSError?
-                audioPlayer = AVAudioPlayer(contentsOfURL: ficheroSonidoURL, error: &error)
-                if let audio = audioPlayer {
-                    audio.prepareToPlay()
-                }
+            let ficheroSonidoURL = NSURL(fileURLWithPath: pathFichero)
+            
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOfURL: ficheroSonidoURL)
+            } catch  {
+                
+                audioPlayer = nil
+            }
+            if let audio = audioPlayer {
+                audio.prepareToPlay()
             }
         }
        
@@ -119,15 +123,16 @@ class CaptandoLaAtencionDelUsuarioViewController: UIViewController, UITextFieldD
         
         let okAction = UIAlertAction(title: okButtonTitle, style: .Default) { action in
             var textoIntroducido = "Ha introducido:"
-            /* diferentes maneras de acceder
-            if let fields = alertController.textFields as? [UITextField] {
-                for textField in fields {
-                    textoIntroducido += " " + textField.text
+            
+            if let textFields = alertController.textFields{
+                for textField in textFields {
+                    if let texto = textField.text{
+                        textoIntroducido += " " + texto
+                    }
                 }
-            }*/
-            for textField in alertController.textFields as [UITextField] {  // no se controla el type porque estamos seguros que será UITextField
-                textoIntroducido += " " + textField.text
+                
             }
+
             
             self.mensajeLabel.text = textoIntroducido
             

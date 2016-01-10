@@ -29,7 +29,7 @@ class DetalleArticuloViewController: UIViewController, MFMailComposeViewControll
         super.viewWillAppear(animated)
         
 
-        var dateFormatter = NSDateFormatter()
+        let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = FormatoFecha.formatoGeneral
         let fechaStr = dateFormatter.stringFromDate(articulo.fecha )
 
@@ -42,7 +42,7 @@ class DetalleArticuloViewController: UIViewController, MFMailComposeViewControll
     }
     
     // MARK: - MFMailComposeViewControllerDelegate
-    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
@@ -94,7 +94,7 @@ class DetalleArticuloViewController: UIViewController, MFMailComposeViewControll
             mailComposer.setToRecipients(["miguel.gutierrez.moreno@gmail.com","otro.correo@gmail.com"])
             let asunto = NSString(format: "Escritor: %@  Fecha: %@ \n Artículo: %@", articulo.nombre,articulo.fecha,articulo.texto)
             mailComposer.setSubject("Artículo de " + articulo.nombre)
-            mailComposer.setMessageBody(asunto, isHTML: false)
+            mailComposer.setMessageBody(asunto as String, isHTML: false)
             
             mailComposer.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
             presentViewController(mailComposer, animated: true, completion: nil)

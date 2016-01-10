@@ -36,19 +36,20 @@ class TraitOverrideViewController: UIViewController, UISplitViewControllerDelega
     
     private func configureSplitVC() {
         // Set up split view delegate
-        let splitVC = self.childViewControllers[0] as UISplitViewController
+        let splitVC = self.childViewControllers[0] as! UISplitViewController
         splitVC.delegate = self
 
         // splitVC.preferredPrimaryColumnWidthFraction = 0.3
-        let navVC = splitVC.childViewControllers.last as UINavigationController
-        navVC.topViewController.navigationItem.leftBarButtonItem = splitVC.displayModeButtonItem()
+        if let navVC = splitVC.childViewControllers.last as? UINavigationController{
+            navVC.topViewController?.navigationItem.leftBarButtonItem = splitVC.displayModeButtonItem()
+        }
 
     }
     
     
     // MARK: - Split view
     
-    func splitViewController(splitViewController: UISplitViewController!, collapseSecondaryViewController secondaryViewController:UIViewController!, ontoPrimaryViewController primaryViewController:UIViewController!) -> Bool {
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool {
         if let secondaryAsNavController = secondaryViewController as? UINavigationController {
             if let topAsDetailController = secondaryAsNavController.topViewController as? DetalleArticuloViewController {
                 if topAsDetailController.articulo == nil {

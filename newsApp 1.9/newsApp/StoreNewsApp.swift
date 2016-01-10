@@ -39,11 +39,11 @@ class StoreNewsApp {
         let psc = NSPersistentStoreCoordinator(managedObjectModel: model!)
         
         // Where does the SQLite file go?
-        let storeURL = NSURL(fileURLWithPath: StoreNewsApp.myNewsAppArchivePath())
-        var error : NSError?
-        
-        if psc.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: nil, error: &error) == nil {
-            NSException.raise(MensajesErrorCoreData.exceptionRaise, format: MensajesErrorCoreData.exceptionFormat, arguments:getVaList([error!]))
+        do {
+            try psc.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil,
+                URL: StoreNewsApp.myNewsAppArchivePath(), options: nil)
+        } catch let error1 as NSError {
+            NSException.raise(MensajesErrorCoreData.exceptionRaise, format: MensajesErrorCoreData.exceptionFormat, arguments:getVaList([error1]))
         }
         
         context = NSManagedObjectContext()
@@ -52,7 +52,14 @@ class StoreNewsApp {
     // MARK: métodos
     func graba() -> Bool {
         var error : NSError?
-        let succesful = context.save(&error)
+        let succesful: Bool
+        do {
+            try context.save()
+            succesful = true
+        } catch let error1 as NSError {
+            error = error1
+            succesful = false
+        }
         if (error != nil) {
             NSLog("Error saving: \(error?.localizedDescription)")
         }
@@ -79,13 +86,11 @@ class StoreNewsApp {
 
     
     // nombre de la bbdd
-    class func myNewsAppArchivePath() -> String {
-        let documentDirectories = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+    class func myNewsAppArchivePath() -> NSURL {
         
-        let documentDirectory = documentDirectories[0] as String
-        return documentDirectory.stringByAppendingPathComponent("myNewsApp.sqlite")
+        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        return documentsURL.URLByAppendingPathComponent("myNewsApp.sqlite")
     }
-    
     
 }
 
