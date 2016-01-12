@@ -27,8 +27,6 @@ class ArticuloViewController: UIViewController, UITextFieldDelegate, UIPopoverPr
         struct Identifiers {
             static let popoverViewController = "popoverViewController"
         }
-
-        
     }
 
     // MARK: properties

@@ -80,19 +80,28 @@ class CaptandoLaAtencionDelUsuarioViewController: UIViewController, UITextFieldD
         
         let titulo = NSLocalizedString("ERROR", comment: "")
         let mensaje = NSLocalizedString("Falta introducir el nombre. Quieres continuar?", comment: "")
+        let cancelButtonTitle = NSLocalizedString("Cancel", comment: "")
         let okButtonTitle = NSLocalizedString("OK", comment: "")
         
         let alertController = UIAlertController(title: titulo, message: mensaje, preferredStyle: .Alert)
         
         // Create the action.
-        let okAction = UIAlertAction(title: okButtonTitle, style: .Cancel) {
+        let okAction = UIAlertAction(title: okButtonTitle, style: .Default) {
             // se requiere ya que accedemos a self
             [unowned self]
             action in
             self.mensajeLabel.text = "Ha pulsado OK."
         }
         
-        // Add the action.
+        let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .Cancel) {
+            [unowned self]
+            action in
+            self.mensajeLabel.text = "Ha pulsado Cancel"
+            
+        }
+
+        // Add the actions.
+        alertController.addAction(cancelAction)
         alertController.addAction(okAction)
         
         presentViewController(alertController, animated: true, completion: nil)
