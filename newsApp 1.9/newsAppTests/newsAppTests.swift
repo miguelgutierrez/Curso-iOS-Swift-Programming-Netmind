@@ -8,6 +8,7 @@
 
 import UIKit
 import XCTest
+@testable import newsApp
 
 class newsAppTests: XCTestCase {
     
@@ -26,6 +27,15 @@ class newsAppTests: XCTestCase {
         XCTAssert(true, "Pass")
     }
     
+    func testCoreData(){
+        NSLog("testCoreData")
+        
+        XCTAssertNotNil(StoreNewsApp.defaultStore())
+        
+        XCTAssertTrue(Articulo.articulosAnterioresA(NSDate())?.count>0, "Debe ser mayor 0")
+
+        
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock() {

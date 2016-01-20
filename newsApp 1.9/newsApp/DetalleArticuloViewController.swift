@@ -115,13 +115,19 @@ class DetalleArticuloViewController: UIViewController, MFMailComposeViewControll
 
         if let articulo = self.articulo {
 
-            navigationItem.title = "Artículo de \(articulo.nombre)"
 
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = FormatoFecha.formatoGeneral
-            let fechaStr = dateFormatter.stringFromDate(articulo.fecha)
-            
-            articuloTextView.text = "Nombre: \(articulo.nombre)\n Fecha: \(fechaStr)\n Texto: \(articulo.texto)"
+            if let fecha = articulo.fecha {
+                let fechaStr = dateFormatter.stringFromDate(fecha)
+                if let nombre = articulo.nombre {
+                    navigationItem.title = "Artículo de \(nombre)"
+                    if let texto = articulo.texto{
+                        articuloTextView.text = "Nombre: \(nombre)\n Fecha: \(fechaStr)\n Texto: \(texto)"
+                        
+                    }
+                }
+            }
         }
 
         if let masterPopoverController = masterPopoverController {
@@ -135,14 +141,15 @@ class DetalleArticuloViewController: UIViewController, MFMailComposeViewControll
             if let articulo = articulo {
                 let mailComposer = MFMailComposeViewController()
                 mailComposer.mailComposeDelegate = self
-                
-                mailComposer.setToRecipients(["miguel.gutierrez.moreno@gmail.com","otro.correo@gmail.com"])
-                let asunto = NSString(format: "Escritor: %@  Fecha: %@ \n Artículo: %@", articulo.nombre,articulo.fecha,articulo.texto)
-                mailComposer.setSubject("Artículo de " + articulo.nombre)
-                mailComposer.setMessageBody(asunto as String, isHTML: false)
-                
-                mailComposer.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-                presentViewController(mailComposer, animated: true, completion: nil)
+                if let nombre=articulo.nombre, texto=articulo.texto, fecha=articulo.fecha {                    mailComposer.setToRecipients(["miguel.gutierrez.moreno@gmail.com","otro.correo@gmail.com"])
+                    let asunto = NSString(format: "Escritor: %@  Fecha: %@ \n Artículo: %@", nombre,fecha,texto)
+                    mailComposer.setSubject("Artículo de " + articulo.nombre!)
+                    mailComposer.setMessageBody(asunto as String, isHTML: false)
+                    
+                    mailComposer.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+                    presentViewController(mailComposer, animated: true, completion: nil)
+                    
+                }
             }
         }
     }
@@ -150,7 +157,7 @@ class DetalleArticuloViewController: UIViewController, MFMailComposeViewControll
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             if let articulo = articulo {
                 let tweetSheet = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-                tweetSheet.setInitialText("Lee el artículo de: "+articulo.nombre)
+                tweetSheet.setInitialText("Lee el artículo de: "+articulo.nombre!)
                 presentViewController(tweetSheet, animated: true, completion: nil)
             }
         }

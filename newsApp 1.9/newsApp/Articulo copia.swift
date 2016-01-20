@@ -2,23 +2,27 @@
 //  Articulo.swift
 //  newsApp
 //
-//  Created by Miguel Gutiérrez Moreno on 19/1/16.
-//  Copyright © 2016 MGM. All rights reserved.
+//  Created by Miguel Gutiérrez Moreno on 2/2/15.
+//  Copyright (c) 2015 MGM. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
 @objc(Articulo)
+
 class Articulo: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
+    // MARK: properties
+    @NSManaged var fecha: NSDate
+    @NSManaged var nombre: String
+    @NSManaged var texto: String
 
     func inicializaValores(){
         nombre = ""
         fecha = NSDate()
         texto = ""
-        
+
     }
     // MARK: métodos de ayuda
     class func entityName() -> String {
@@ -46,28 +50,6 @@ class Articulo: NSManagedObject {
             return nil
         }
     }
-    class func articulosAnterioresA(fecha:NSDate) -> [Articulo]? {
-        let request = NSFetchRequest()
-        let model = StoreNewsApp.defaultStore().model
-        
-        let entidad = model.entitiesByName[Articulo.entityName()]
-        request.entity = entidad
-        
-        let sd = NSSortDescriptor(key: "nombre", ascending: true)
-        request.sortDescriptors = [sd]
-        
-        let context = StoreNewsApp.defaultStore().context
-        
-        request.predicate = NSPredicate(format: "fecha <= %@", fecha)
-        
-        let result: [AnyObject]?
-        do {
-            result = try context.executeFetchRequest(request)
-            return result as? [Articulo]
-        } catch let error as NSError {
-            NSException.raise(MensajesErrorCoreData.fetchFailed, format: MensajesErrorCoreData.errorFetchObjectFormat, arguments:getVaList([error]))
-            return nil
-        }
-    }
     
+
 }

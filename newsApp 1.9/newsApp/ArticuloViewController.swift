@@ -91,7 +91,7 @@ class ArticuloViewController: UIViewController, UITextFieldDelegate, UIPopoverPr
         
         popoverViewController?.popoverPresentationController?.sourceView = sender
         popoverViewController?.popoverPresentationController?.permittedArrowDirections = .Any
-        popoverViewController?.preferredContentSize = CGSizeMake(300.0, 200.0)
+        popoverViewController?.preferredContentSize = CGSizeMake(300.0, 200.0)  // alternativa: definir el tamaño en el Storyboard
 
     }
     @IBAction func grabar(sender: UIButton) {

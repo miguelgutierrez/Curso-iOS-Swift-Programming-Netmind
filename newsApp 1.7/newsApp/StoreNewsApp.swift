@@ -82,15 +82,11 @@ class StoreNewsApp {
         
         return Static.instance!;
     }
-
-    
     // nombre de la bbdd
     class func myNewsAppArchivePath() -> NSURL {
         
         let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
         return documentsURL.URLByAppendingPathComponent("myNewsApp.sqlite")
     }
-    
-    
 }
 

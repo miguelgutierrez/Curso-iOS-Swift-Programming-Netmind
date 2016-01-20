@@ -25,6 +25,7 @@ class DetalleArticuloViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+    
         if let articulo = self.articulo {
 
             let dateFormatter = NSDateFormatter()

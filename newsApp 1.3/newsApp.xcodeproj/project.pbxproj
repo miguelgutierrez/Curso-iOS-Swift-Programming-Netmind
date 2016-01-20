@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		871026BC1C4E8E9F0026A082 /* Articulos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871026BB1C4E8E9F0026A082 /* Articulos.storyboard */; };
 		8755E1BD1A711BB8004863D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8755E1BC1A711BB8004863D2 /* AppDelegate.swift */; };
 		8755E1C41A711BB8004863D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8755E1C21A711BB8004863D2 /* Main.storyboard */; };
 		8755E1C61A711BB8004863D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8755E1C51A711BB8004863D2 /* Images.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		871026BB1C4E8E9F0026A082 /* Articulos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Articulos.storyboard; sourceTree = "<group>"; };
 		8755E1B71A711BB8004863D2 /* newsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8755E1BB1A711BB8004863D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8755E1BC1A711BB8004863D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				8755E1C21A711BB8004863D2 /* Main.storyboard */,
 				8755E1C71A711BB8004863D2 /* LaunchScreen.xib */,
 				8755E1C51A711BB8004863D2 /* Images.xcassets */,
+				871026BB1C4E8E9F0026A082 /* Articulos.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8755E1C41A711BB8004863D2 /* Main.storyboard in Resources */,
+				871026BC1C4E8E9F0026A082 /* Articulos.storyboard in Resources */,
 				8755E1C91A711BB8004863D2 /* LaunchScreen.xib in Resources */,
 				8755E1C61A711BB8004863D2 /* Images.xcassets in Resources */,
 			);
@@ -398,7 +402,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = newsApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mgm.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,7 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = newsApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mgm.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -64,8 +64,8 @@ class ArticulosTableViewController: UITableViewController {
         super.viewDidAppear(animated)
 
         self.muestraBadgeConTotalArticulos()
-        // mgm volver a poner 
-        // self.muestraCantidadDeLecturas(lecturasRealizadas)
+        
+        self.muestraCantidadDeLecturas(lecturasRealizadas)
     }
     
     override func didReceiveMemoryWarning() {
@@ -171,7 +171,7 @@ class ArticulosTableViewController: UITableViewController {
     private func actualizaArticulosDeCoreData() {
 
         arrayDeArticulos.removeAll(keepCapacity: true)
-        if let articulos = Articulo.articulos() {
+        if let articulos = Articulo.articulosAnterioresA(NSDate()) {
             arrayDeArticulos += articulos
         }
     }

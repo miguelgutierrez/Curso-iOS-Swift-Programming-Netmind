@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F27" minimumToolsVersion="Xcode 7.0">
+    <entity name="Articulo" representedClassName="Articulo" syncable="YES">
+        <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fecha" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="texto" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="escritoPor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Escritor" inverseName="escribe" inverseEntity="Escritor" syncable="YES"/>
+    </entity>
+    <entity name="Escritor" representedClassName=".Escritor" syncable="YES">
+        <attribute name="fechaNacimiento" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="escribe" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Articulo" inverseName="escritoPor" inverseEntity="Articulo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Articulo" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Escritor" positionX="-54" positionY="18" width="128" height="90"/>
+    </elements>
+</model>

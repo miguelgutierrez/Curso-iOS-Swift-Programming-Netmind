@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		871026C21C4E9AD10026A082 /* modeloNewsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 871026C01C4E9AD10026A082 /* modeloNewsApp.xcdatamodeld */; };
+		871026CB1C4E9CCD0026A082 /* Articulo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871026C91C4E9CCD0026A082 /* Articulo+CoreDataProperties.swift */; };
+		871026CC1C4E9CCD0026A082 /* Articulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871026CA1C4E9CCD0026A082 /* Articulo.swift */; };
+		871026CF1C4E9FFA0026A082 /* Escritor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871026CD1C4E9FFA0026A082 /* Escritor+CoreDataProperties.swift */; };
+		871026D01C4E9FFA0026A082 /* Escritor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871026CE1C4E9FFA0026A082 /* Escritor.swift */; };
 		8755E1BD1A711BB8004863D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8755E1BC1A711BB8004863D2 /* AppDelegate.swift */; };
 		8755E1C61A711BB8004863D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8755E1C51A711BB8004863D2 /* Images.xcassets */; };
 		8755E1C91A711BB8004863D2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8755E1C71A711BB8004863D2 /* LaunchScreen.xib */; };
@@ -18,7 +23,6 @@
 		8755E2171A76B8BD004863D2 /* Periodico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8755E2111A76B8BD004863D2 /* Periodico.swift */; };
 		8755E2181A76B8BD004863D2 /* PeriodicosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8755E2121A76B8BD004863D2 /* PeriodicosTableViewController.swift */; };
 		8755E21D1A76B917004863D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8755E21B1A76B917004863D2 /* Main.storyboard */; };
-		8755E2221A76B99E004863D2 /* Articulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8755E2211A76B99E004863D2 /* Articulo.swift */; };
 		8755E2241A76C799004863D2 /* FechaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8755E2231A76C798004863D2 /* FechaViewController.swift */; };
 		87E966E21A7B84D900F7B277 /* NSDateFormatter+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E966C61A7B84D900F7B277 /* NSDateFormatter+STTwitter.m */; };
 		87E966E31A7B84D900F7B277 /* NSError+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E966C81A7B84D900F7B277 /* NSError+STTwitter.m */; };
@@ -49,6 +53,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		871026C11C4E9AD10026A082 /* modeloNewsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = modeloNewsApp.xcdatamodel; sourceTree = "<group>"; };
+		871026C91C4E9CCD0026A082 /* Articulo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Articulo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		871026CA1C4E9CCD0026A082 /* Articulo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Articulo.swift; sourceTree = "<group>"; };
+		871026CD1C4E9FFA0026A082 /* Escritor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Escritor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		871026CE1C4E9FFA0026A082 /* Escritor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Escritor.swift; sourceTree = "<group>"; };
 		8755E1B71A711BB8004863D2 /* newsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8755E1BB1A711BB8004863D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8755E1BC1A711BB8004863D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +73,6 @@
 		8755E2111A76B8BD004863D2 /* Periodico.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Periodico.swift; sourceTree = "<group>"; };
 		8755E2121A76B8BD004863D2 /* PeriodicosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodicosTableViewController.swift; sourceTree = "<group>"; };
 		8755E21C1A76B917004863D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8755E2211A76B99E004863D2 /* Articulo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Articulo.swift; sourceTree = "<group>"; };
 		8755E2231A76C798004863D2 /* FechaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FechaViewController.swift; sourceTree = "<group>"; };
 		87E966C11A7B848100F7B277 /* newsApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "newsApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		87E966C51A7B84D900F7B277 /* NSDateFormatter+STTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+STTwitter.h"; sourceTree = "<group>"; };
@@ -179,8 +187,11 @@
 		8755E1DE1A711C0F004863D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8755E2211A76B99E004863D2 /* Articulo.swift */,
 				87E966EF1A7B8D1900F7B277 /* Tweet.swift */,
+				871026C91C4E9CCD0026A082 /* Articulo+CoreDataProperties.swift */,
+				871026CA1C4E9CCD0026A082 /* Articulo.swift */,
+				871026CD1C4E9FFA0026A082 /* Escritor+CoreDataProperties.swift */,
+				871026CE1C4E9FFA0026A082 /* Escritor.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -213,6 +224,7 @@
 				8755E21B1A76B917004863D2 /* Main.storyboard */,
 				8755E1C71A711BB8004863D2 /* LaunchScreen.xib */,
 				8755E1C51A711BB8004863D2 /* Images.xcassets */,
+				871026C01C4E9AD10026A082 /* modeloNewsApp.xcdatamodeld */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -392,12 +404,13 @@
 				87E966E71A7B84D900F7B277 /* STTwitterAppOnly.m in Sources */,
 				87FDBC401A7B7CF20077ED50 /* TwitterTableViewController.swift in Sources */,
 				87E966E91A7B84D900F7B277 /* STTwitterOAuth.m in Sources */,
-				8755E2221A76B99E004863D2 /* Articulo.swift in Sources */,
 				87E966E21A7B84D900F7B277 /* NSDateFormatter+STTwitter.m in Sources */,
+				871026C21C4E9AD10026A082 /* modeloNewsApp.xcdatamodeld in Sources */,
 				8755E2161A76B8BD004863D2 /* NoticiasViewController.swift in Sources */,
 				8755E2131A76B8BD004863D2 /* ArticulosTableViewController.swift in Sources */,
 				87E966EC1A7B84D900F7B277 /* BAVPlistNode.m in Sources */,
 				87E966EA1A7B84D900F7B277 /* STTwitterOS.m in Sources */,
+				871026CC1C4E9CCD0026A082 /* Articulo.swift in Sources */,
 				8755E2171A76B8BD004863D2 /* Periodico.swift in Sources */,
 				87E966F01A7B8D1900F7B277 /* Tweet.swift in Sources */,
 				87E966E31A7B84D900F7B277 /* NSError+STTwitter.m in Sources */,
@@ -406,12 +419,15 @@
 				87E966EB1A7B84D900F7B277 /* STTwitterOSRequest.m in Sources */,
 				8755E2181A76B8BD004863D2 /* PeriodicosTableViewController.swift in Sources */,
 				8755E2141A76B8BD004863D2 /* ArticuloViewController.swift in Sources */,
+				871026CB1C4E9CCD0026A082 /* Articulo+CoreDataProperties.swift in Sources */,
 				87FDBC3E1A7B79A10077ED50 /* TwitterAPIClient.swift in Sources */,
 				87E966EE1A7B84D900F7B277 /* STHTTPRequest.m in Sources */,
+				871026D01C4E9FFA0026A082 /* Escritor.swift in Sources */,
 				87E966E61A7B84D900F7B277 /* STTwitterAPI.m in Sources */,
 				87E966E81A7B84D900F7B277 /* STTwitterHTML.m in Sources */,
 				8755E2151A76B8BD004863D2 /* DetalleArticuloViewController.swift in Sources */,
 				87E966E51A7B84D900F7B277 /* STHTTPRequest+STTwitter.m in Sources */,
+				871026CF1C4E9FFA0026A082 /* Escritor+CoreDataProperties.swift in Sources */,
 				87E966ED1A7B84D900F7B277 /* JSONSyntaxHighlight.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,6 +646,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		871026C01C4E9AD10026A082 /* modeloNewsApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				871026C11C4E9AD10026A082 /* modeloNewsApp.xcdatamodel */,
+			);
+			currentVersion = 871026C11C4E9AD10026A082 /* modeloNewsApp.xcdatamodel */;
+			path = modeloNewsApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8755E1AF1A711BB8004863D2 /* Project object */;
 }

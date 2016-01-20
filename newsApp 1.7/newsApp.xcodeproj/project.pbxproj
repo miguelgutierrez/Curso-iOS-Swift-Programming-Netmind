@@ -20,7 +20,7 @@
 		8755E21D1A76B917004863D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8755E21B1A76B917004863D2 /* Main.storyboard */; };
 		8755E2241A76C799004863D2 /* FechaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8755E2231A76C798004863D2 /* FechaViewController.swift */; };
 		87D8B6561A7F6A2000F21333 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 87D8B6551A7F6A2000F21333 /* Settings.bundle */; };
-		87D8B6591A7F74E100F21333 /* modeloNewsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87D8B6571A7F74E100F21333 /* modeloNewsApp.xcdatamodeld */; };
+		87D8B6591A7F74E100F21333 /* myNewsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87D8B6571A7F74E100F21333 /* myNewsApp.xcdatamodeld */; };
 		87D8B65B1A7F753300F21333 /* Articulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D8B65A1A7F753300F21333 /* Articulo.swift */; };
 		87D8B65D1A7F760E00F21333 /* StoreNewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D8B65C1A7F760E00F21333 /* StoreNewsApp.swift */; };
 		87E966E21A7B84D900F7B277 /* NSDateFormatter+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E966C61A7B84D900F7B277 /* NSDateFormatter+STTwitter.m */; };
@@ -69,7 +69,7 @@
 		8755E21C1A76B917004863D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8755E2231A76C798004863D2 /* FechaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FechaViewController.swift; sourceTree = "<group>"; };
 		87D8B6551A7F6A2000F21333 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		87D8B6581A7F74E100F21333 /* modeloNewsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = modeloNewsApp.xcdatamodel; sourceTree = "<group>"; };
+		87D8B6581A7F74E100F21333 /* myNewsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myNewsApp.xcdatamodel; sourceTree = "<group>"; };
 		87D8B65A1A7F753300F21333 /* Articulo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Articulo.swift; sourceTree = "<group>"; };
 		87D8B65C1A7F760E00F21333 /* StoreNewsApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreNewsApp.swift; sourceTree = "<group>"; };
 		87E966C11A7B848100F7B277 /* newsApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "newsApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 			children = (
 				87D8B65A1A7F753300F21333 /* Articulo.swift */,
 				87E966EF1A7B8D1900F7B277 /* Tweet.swift */,
-				87D8B6571A7F74E100F21333 /* modeloNewsApp.xcdatamodeld */,
+				87D8B6571A7F74E100F21333 /* myNewsApp.xcdatamodeld */,
 				87D8B65C1A7F760E00F21333 /* StoreNewsApp.swift */,
 			);
 			name = Models;
@@ -405,7 +405,7 @@
 				87E966E91A7B84D900F7B277 /* STTwitterOAuth.m in Sources */,
 				87E966E21A7B84D900F7B277 /* NSDateFormatter+STTwitter.m in Sources */,
 				8755E2161A76B8BD004863D2 /* NoticiasViewController.swift in Sources */,
-				87D8B6591A7F74E100F21333 /* modeloNewsApp.xcdatamodeld in Sources */,
+				87D8B6591A7F74E100F21333 /* myNewsApp.xcdatamodeld in Sources */,
 				8755E2131A76B8BD004863D2 /* ArticulosTableViewController.swift in Sources */,
 				87E966EC1A7B84D900F7B277 /* BAVPlistNode.m in Sources */,
 				87E966EA1A7B84D900F7B277 /* STTwitterOS.m in Sources */,
@@ -644,13 +644,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		87D8B6571A7F74E100F21333 /* modeloNewsApp.xcdatamodeld */ = {
+		87D8B6571A7F74E100F21333 /* myNewsApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				87D8B6581A7F74E100F21333 /* modeloNewsApp.xcdatamodel */,
+				87D8B6581A7F74E100F21333 /* myNewsApp.xcdatamodel */,
 			);
-			currentVersion = 87D8B6581A7F74E100F21333 /* modeloNewsApp.xcdatamodel */;
-			path = modeloNewsApp.xcdatamodeld;
+			currentVersion = 87D8B6581A7F74E100F21333 /* myNewsApp.xcdatamodel */;
+			path = myNewsApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

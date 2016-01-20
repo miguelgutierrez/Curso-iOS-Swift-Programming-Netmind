@@ -19,9 +19,10 @@
 		8755E2181A76B8BD004863D2 /* PeriodicosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8755E2121A76B8BD004863D2 /* PeriodicosTableViewController.swift */; };
 		8755E21D1A76B917004863D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8755E21B1A76B917004863D2 /* Main.storyboard */; };
 		8755E2241A76C799004863D2 /* FechaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8755E2231A76C798004863D2 /* FechaViewController.swift */; };
+		8780A34C1C4ED411006AEAC9 /* Articulo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780A34A1C4ED411006AEAC9 /* Articulo+CoreDataProperties.swift */; };
+		8780A34D1C4ED411006AEAC9 /* Articulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780A34B1C4ED411006AEAC9 /* Articulo.swift */; };
 		87D8B6561A7F6A2000F21333 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 87D8B6551A7F6A2000F21333 /* Settings.bundle */; };
 		87D8B6591A7F74E100F21333 /* modeloNewsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87D8B6571A7F74E100F21333 /* modeloNewsApp.xcdatamodeld */; };
-		87D8B65B1A7F753300F21333 /* Articulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D8B65A1A7F753300F21333 /* Articulo.swift */; };
 		87D8B65D1A7F760E00F21333 /* StoreNewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D8B65C1A7F760E00F21333 /* StoreNewsApp.swift */; };
 		87D8B6621A7FB00D00F21333 /* LocalizacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D8B6611A7FB00D00F21333 /* LocalizacionViewController.swift */; };
 		87D8B6641A7FC92400F21333 /* Anotacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D8B6631A7FC92400F21333 /* Anotacion.swift */; };
@@ -72,9 +73,10 @@
 		8755E2121A76B8BD004863D2 /* PeriodicosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodicosTableViewController.swift; sourceTree = "<group>"; };
 		8755E21C1A76B917004863D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8755E2231A76C798004863D2 /* FechaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FechaViewController.swift; sourceTree = "<group>"; };
+		8780A34A1C4ED411006AEAC9 /* Articulo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Articulo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8780A34B1C4ED411006AEAC9 /* Articulo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Articulo.swift; sourceTree = "<group>"; };
 		87D8B6551A7F6A2000F21333 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		87D8B6581A7F74E100F21333 /* modeloNewsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = modeloNewsApp.xcdatamodel; sourceTree = "<group>"; };
-		87D8B65A1A7F753300F21333 /* Articulo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Articulo.swift; sourceTree = "<group>"; };
 		87D8B65C1A7F760E00F21333 /* StoreNewsApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreNewsApp.swift; sourceTree = "<group>"; };
 		87D8B6611A7FB00D00F21333 /* LocalizacionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizacionViewController.swift; sourceTree = "<group>"; };
 		87D8B6631A7FC92400F21333 /* Anotacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anotacion.swift; sourceTree = "<group>"; };
@@ -193,10 +195,11 @@
 		8755E1DE1A711C0F004863D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				87D8B65A1A7F753300F21333 /* Articulo.swift */,
 				87E966EF1A7B8D1900F7B277 /* Tweet.swift */,
 				87D8B6571A7F74E100F21333 /* modeloNewsApp.xcdatamodeld */,
 				87D8B65C1A7F760E00F21333 /* StoreNewsApp.swift */,
+				8780A34A1C4ED411006AEAC9 /* Articulo+CoreDataProperties.swift */,
+				8780A34B1C4ED411006AEAC9 /* Articulo.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				87D8B6591A7F74E100F21333 /* modeloNewsApp.xcdatamodeld in Sources */,
 				8755E2131A76B8BD004863D2 /* ArticulosTableViewController.swift in Sources */,
 				87E966EC1A7B84D900F7B277 /* BAVPlistNode.m in Sources */,
+				8780A34D1C4ED411006AEAC9 /* Articulo.swift in Sources */,
 				87E966EA1A7B84D900F7B277 /* STTwitterOS.m in Sources */,
 				8755E2171A76B8BD004863D2 /* Periodico.swift in Sources */,
 				87E966F01A7B8D1900F7B277 /* Tweet.swift in Sources */,
@@ -430,8 +434,8 @@
 				8755E2241A76C799004863D2 /* FechaViewController.swift in Sources */,
 				87D8B6621A7FB00D00F21333 /* LocalizacionViewController.swift in Sources */,
 				87E966EB1A7B84D900F7B277 /* STTwitterOSRequest.m in Sources */,
-				87D8B65B1A7F753300F21333 /* Articulo.swift in Sources */,
 				8755E2181A76B8BD004863D2 /* PeriodicosTableViewController.swift in Sources */,
+				8780A34C1C4ED411006AEAC9 /* Articulo+CoreDataProperties.swift in Sources */,
 				8755E2141A76B8BD004863D2 /* ArticuloViewController.swift in Sources */,
 				87FDBC3E1A7B79A10077ED50 /* TwitterAPIClient.swift in Sources */,
 				87E966EE1A7B84D900F7B277 /* STHTTPRequest.m in Sources */,
